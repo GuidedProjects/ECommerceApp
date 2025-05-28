@@ -1,0 +1,14 @@
+# Models
+- **Customer**: Represents users who can place orders, including authentication details. 
+- **Address**: Stores multiple addresses per customer for billing and shipping purposes. 
+- **Category**: Manages product categories. 
+- **Product**: Represents items available for purchase, linked to categories and supporting discounts. 
+- **Cart**: Represents a shopping cart associated with a customer. 
+- **CartItems**: Represents an individual product entry within a shopping cart. 
+- **Order**: Represents a customer’s order with detailed financial tracking and status. 
+- **OrderItem**: Represents individual items within an order, including discounts. 
+- **Status**: Represents the different statuses that can be used with order and payment. 
+- **Payment**: Represents the Payment associated with a specific order.
+- **Cancellation**: This entity captures the details of a cancellation request made by a customer.
+- **Refund**: This entity manages the refund details associated with a cancellation or return.
+- **Feedback**: This entity stores the feedback provided by a user on the purchase of a product.

@@ -1,5 +1,5 @@
 using ECommerceApp.Data;
-//using ECommerceApp.Services;
+using ECommerceApp.Service;
 using Microsoft.EntityFrameworkCore;
 
 namespace ECommerceApp
