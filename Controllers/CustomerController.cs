@@ -1,7 +1,6 @@
 using ECommerceApp.DTOs;
 using ECommerceApp.DTOs.CustomerDTO;
 using ECommerceApp.DTOs.CustomerDTOs;
-using ECommerceApp.Models;
 using ECommerceApp.Service;
 using Microsoft.AspNetCore.Mvc;
 
