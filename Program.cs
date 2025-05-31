@@ -1,7 +1,6 @@
 using ECommerceApp.Data;
 using ECommerceApp.Service;
 using Microsoft.EntityFrameworkCore;
-
 namespace ECommerceApp
 {
     public class Program
@@ -28,6 +27,9 @@ namespace ECommerceApp
                 options.UseSqlServer(builder.Configuration.GetConnectionString("EFCoreDBConnection")));
             // Registering the CustomerService
             builder.Services.AddScoped<CustomerService>();
+            
+            // Registering the AddressService
+            builder.Services.AddScoped<AddressService>();
 
             var app = builder.Build();
 
@@ -37,13 +39,9 @@ namespace ECommerceApp
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-
             app.UseHttpsRedirection();
-
             app.UseAuthorization();
-
             app.MapControllers();
-
             app.Run();
         }
     }
