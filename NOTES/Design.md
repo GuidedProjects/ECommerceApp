@@ -12,3 +12,22 @@
 - **Cancellation**: This entity captures the details of a cancellation request made by a customer.
 - **Refund**: This entity manages the refund details associated with a cancellation or return.
 - **Feedback**: This entity stores the feedback provided by a user on the purchase of a product.
+
+# RESTful API + C# Clean Architecture
+- **ApiResponse<ConfirmationResponseDTO>**: when the API operation performs a write action (such as Create, Update, Delete) and you only need to confirm the result rather than return the full object data.
+  - Common scenarios:
+    -  Creating a record but not returning full details.
+
+    - Updating existing data.
+
+    - Soft/hard deleting records.
+
+    - Changing user credentials (e.g., password).
+
+    - Performing other state-changing actions (e.g., activation/deactivation).
+- **ApiResponse<T>**: when your API operation is intended to retrieve and return data to the client.
+  - Common scenarios:
+    - Fetching details of a single record by ID.
+    - Returning a newly created object after a successful POST.
+    - Returning a list of data (use ApiResponse<List<T>>).
+    - Any read-only operation where the client needs the full or partial entity data.
