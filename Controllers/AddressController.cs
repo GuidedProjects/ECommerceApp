@@ -27,6 +27,7 @@ public class AddressController : ControllerBase
         }
         return Ok(response);
     }
+    [HttpGet("{id}")]
     public async Task<ActionResult<ApiResponse<AddressResponseDTO>>> GetAddressById(int id)
     {
         var response = await _addressService.GetAddressByIdAsync(id);

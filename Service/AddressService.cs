@@ -48,7 +48,7 @@ namespace ECommerceApp.Service
                     PostalCode = address.PostalCode,
                     Country = address.Country
                 };
-                return new ApiResponse<AddressResponseDTO>(400, addressResponse);
+                return new ApiResponse<AddressResponseDTO>(201, addressResponse);
             }
             catch (Exception ex)
             {
