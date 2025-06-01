@@ -14,7 +14,7 @@ public class CategoryService
     {
         _context = context;
     }
-    public async Task<ApiResponse<CategoryResponseDTO>> CreateCategory(CategoryCreateDTO categoryDto)
+    public async Task<ApiResponse<CategoryResponseDTO>> CreateCategoryAsync(CategoryCreateDTO categoryDto)
     {
         try
         {
@@ -112,7 +112,7 @@ public class CategoryService
         }
     }
 
-    public async Task<ApiResponse<List<CategoryResponseDTO>>> GetAllCategories()
+    public async Task<ApiResponse<List<CategoryResponseDTO>>> GetAllCategoriesAsync()
     {
         try
         {
