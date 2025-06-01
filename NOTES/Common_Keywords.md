@@ -43,8 +43,20 @@ foreach (var p in products)
 }
 
 ``````
-- **FindAsync()**: Finds an entity by its primary key asynchronously. Uses tracking and internal cache.
-- **FirstOrDefaultAsync()**: Returns the first element that matches the condition, or null if none is found.
+## 3. FindAsync()
+- **Purpose**: Asynchronously retrieves an entity by its primary key.
+- **When to use**:
+    - You know the primary key value (e.g., id) and want to load that exact entity.
+    - You plan to modify or delete this entity (tracking is needed).
+- **Key behavior**:
+    - Checks the DbContext’s local cache first (if it’s already tracked).
+    - If not found in cache, queries the database.
+    - Always returns a tracked entity (so you can update fields and save).
+
+
+
+## 4. FirstOrDefaultAsync()
+
 - **ToListAsync()**: Converts the result into a List<T> asynchronously.
 - **Select()**: Transforms and selects specific properties. Commonly used to project into DTOs.
 - **Where()**: Filters data based on given conditions.
