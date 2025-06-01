@@ -30,6 +30,9 @@ namespace ECommerceApp
             
             // Registering the AddressService
             builder.Services.AddScoped<AddressService>();
+            
+            // Registering the CategoryService
+            builder.Services.AddScoped<CategoryService>();
 
             var app = builder.Build();
 
