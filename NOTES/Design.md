@@ -14,7 +14,8 @@
 - **Feedback**: This entity stores the feedback provided by a user on the purchase of a product.
 
 # RESTful API + C# Clean Architecture
-- **ApiResponse<ConfirmationResponseDTO>**: when the API operation performs a write action (such as Create, Update, Delete) and you only need to confirm the result rather than return the full object data.
+## `ApiResponse<ConfirmationResponseDTO>`
+- When the API operation performs a write action (such as Create, Update, Delete) and you only need to confirm the result rather than return the full object data.
   - Common scenarios:
     - Creating a record but not returning full details.
     - Updating existing data.
@@ -22,7 +23,8 @@
     - Changing user credentials (e.g., password).
     - Performing other state-changing actions (e.g., activation/deactivation).
     
-- **ApiResponse<T>**: when your API operation is intended to retrieve and return data to the client.
+## `ApiResponse<T>`
+- When your API operation is intended to retrieve and return data to the client.
   - Common scenarios:
     - Fetching details of a single record by ID.
     - Returning a newly created object after a successful POST.
