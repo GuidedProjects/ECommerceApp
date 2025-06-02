@@ -41,8 +41,21 @@ foreach (var p in products)
     // Now p.Category is already populated (no extra query needed)
     Console.WriteLine($"{p.Name} belongs to {p.Category.Name}");
 }
-
 ``````
+
+### 2.1. ThenInclude()
+- **Purpose**: Loads related data from nested navigation properties after an Include().
+- **When to use**: When you need to load a property of a related entity that has already been included via Include().
+### Example
+```csharp
+var orders = await _context.Orders
+    .Include(o => o.Customer)
+    .ThenInclude(c => c.Membership)
+    .ToListAsync();
+// This loads: All orders - Each order’s customer - And each customer’s membership
+``````
+
+
 ## 3. FindAsync()
 - **Purpose**: Asynchronously retrieves an entity by its primary key.
 - **When to use**:
@@ -173,6 +186,8 @@ if (exists)
     Console.WriteLine("SKU already in use.");
 }
 ``````
+
+
 
 ## Putting It All Together – Sample Flow
 ```csharp
