@@ -28,7 +28,7 @@
   - Common scenarios:
     - Fetching details of a single record by ID.
     - Returning a newly created object after a successful POST.
-    - Returning a list of data (use ApiResponse<List<T>>).
+    - Returning a list of data (use `ApiResponse<List<T>>`).
     - Any read-only operation where the client needs the full or partial entity data.
 
 # Mapping Between Entities and DTOs in ASP.NET Core + EF Core
