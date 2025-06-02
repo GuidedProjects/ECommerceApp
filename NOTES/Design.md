@@ -16,7 +16,7 @@
 # RESTful API + C# Clean Architecture
 ## `ApiResponse<ConfirmationResponseDTO>`
 - When the API operation performs a write action (such as Create, Update, Delete) and you only need to confirm the result rather than return the full object data.
-  - Common scenarios:
+- Common scenarios:
     - Creating a record but not returning full details.
     - Updating existing data.
     - Soft/hard deleting records.
@@ -25,7 +25,7 @@
     
 ## `ApiResponse<T>`
 - When your API operation is intended to retrieve and return data to the client.
-  - Common scenarios:
+- Common scenarios:
     - Fetching details of a single record by ID.
     - Returning a newly created object after a successful POST.
     - Returning a list of data (use `ApiResponse<List<T>>`).
